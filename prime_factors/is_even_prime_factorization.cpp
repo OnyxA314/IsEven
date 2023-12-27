@@ -36,7 +36,13 @@ int main (void)
 		}
 	}
 
-
+	/*
+	//sees list of all primes found (just for fun really)
+	for (int all_primes : primes)
+	{
+		cout << all_primes << endl;
+	}
+	*/
 
 	return 0;
 }
@@ -92,6 +98,8 @@ bool primeFactorization (int num, vector<int> &primes, vector<int> current_facto
 {
 	bool hasTwo = false;
 
+	int original_num = num;
+
 	for (int i = 2; i <= num; i++)
 	{
 		//while number we're factorizing is divisible by i
@@ -111,6 +119,16 @@ bool primeFactorization (int num, vector<int> &primes, vector<int> current_facto
 		}
 	}
 
+	
+	/*
+	//show the factors
+	cout << "Prime Factors for " << original_num << ": ";
+	for (int counter : current_factorization)
+	{
+		cout << counter << " ";
+	}
+	cout << "\n";
+	*/
 
 	if (hasTwo)	//returns true or false depending if the prime factorization contains at least one 2
 	{
